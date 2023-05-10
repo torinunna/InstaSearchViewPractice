@@ -20,6 +20,8 @@ class SearchViewController: UIViewController {
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = .zero
         }
+        
+        self.navigationItem.title = "Search"
     }
 }
 
