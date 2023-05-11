@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -78,24 +79,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjM-3R-ICa">
-                                <rect key="frame" x="168" y="410.5" width="78" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tLm-gH-q6x">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="69b-au-Sx1">
+                                    <size key="itemSize" width="414" height="401"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeedCell" id="UxP-iL-Nf9" customClass="FeedCell" customModule="InstaSearchViewPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7vN-NG-DlX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BeE-o3-sPz">
+                                                    <rect key="frame" x="10" y="10.5" width="40" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Fa4-i5-uEE"/>
+                                                        <constraint firstAttribute="height" constant="40" id="imJ-rW-kvC"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="pawprint.circle.fill" catalog="system" renderingMode="hierarchical">
+                                                        <hierarchicalColors>
+                                                            <color systemColor="labelColor"/>
+                                                            <color systemColor="secondaryLabelColor"/>
+                                                            <color systemColor="tertiaryLabelColor"/>
+                                                        </hierarchicalColors>
+                                                    </imageReference>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="National Geographic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEg-BD-Efx">
+                                                    <rect key="frame" x="60" y="19.5" width="354" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixQ-R8-iMW">
+                                                    <rect key="frame" x="0.0" y="60" width="414" height="310.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ixQ-R8-iMW" secondAttribute="height" multiplier="4:3" id="rT1-zy-dWt"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BeE-o3-sPz" firstAttribute="leading" secondItem="7vN-NG-DlX" secondAttribute="leading" constant="10" id="CRg-M9-nya"/>
+                                                <constraint firstItem="ixQ-R8-iMW" firstAttribute="leading" secondItem="7vN-NG-DlX" secondAttribute="leading" id="D4F-2C-07X"/>
+                                                <constraint firstItem="PEg-BD-Efx" firstAttribute="centerY" secondItem="BeE-o3-sPz" secondAttribute="centerY" id="GfN-eh-mcd"/>
+                                                <constraint firstAttribute="trailing" secondItem="ixQ-R8-iMW" secondAttribute="trailing" id="PC3-Gp-mY8"/>
+                                                <constraint firstItem="ixQ-R8-iMW" firstAttribute="top" secondItem="BeE-o3-sPz" secondAttribute="bottom" constant="10" id="QPh-OY-wET"/>
+                                                <constraint firstItem="BeE-o3-sPz" firstAttribute="top" secondItem="7vN-NG-DlX" secondAttribute="top" constant="10" id="Qzj-ud-Eky"/>
+                                                <constraint firstAttribute="trailing" secondItem="PEg-BD-Efx" secondAttribute="trailing" id="fIa-ov-CJ0"/>
+                                                <constraint firstItem="PEg-BD-Efx" firstAttribute="leading" secondItem="BeE-o3-sPz" secondAttribute="trailing" constant="10" id="lc9-bz-5pW"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="401"/>
+                                        <connections>
+                                            <outlet property="postImage" destination="ixQ-R8-iMW" id="Yjl-5z-GyW"/>
+                                            <outlet property="profileImage" destination="BeE-o3-sPz" id="EdT-WO-nRe"/>
+                                            <outlet property="userNameLabel" destination="PEg-BD-Efx" id="Ttb-aQ-Nz1"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mO9-xw-fFB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JjM-3R-ICa" firstAttribute="centerY" secondItem="mO9-xw-fFB" secondAttribute="centerY" id="eKs-gX-Ysq"/>
-                            <constraint firstItem="JjM-3R-ICa" firstAttribute="centerX" secondItem="mO9-xw-fFB" secondAttribute="centerX" id="idM-pY-SpC"/>
+                            <constraint firstItem="tLm-gH-q6x" firstAttribute="leading" secondItem="mO9-xw-fFB" secondAttribute="leading" id="972-fy-WvC"/>
+                            <constraint firstItem="mO9-xw-fFB" firstAttribute="bottom" secondItem="tLm-gH-q6x" secondAttribute="bottom" id="BTA-CF-9iM"/>
+                            <constraint firstItem="mO9-xw-fFB" firstAttribute="trailing" secondItem="tLm-gH-q6x" secondAttribute="trailing" id="C38-jq-xne"/>
+                            <constraint firstItem="tLm-gH-q6x" firstAttribute="top" secondItem="mO9-xw-fFB" secondAttribute="top" id="kcZ-D7-cBl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="ICA-5e-a05"/>
+                    <connections>
+                        <outlet property="collectionView" destination="tLm-gH-q6x" id="uGj-4k-yfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC2-3b-Fox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="899"/>
+            <point key="canvasLocation" x="18.840579710144929" y="898.66071428571422"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w9o-Wa-nc3">
@@ -224,14 +289,21 @@
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="pawprint.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus.bubble" catalog="system" width="128" height="110"/>
         <image name="video.bubble.left" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
