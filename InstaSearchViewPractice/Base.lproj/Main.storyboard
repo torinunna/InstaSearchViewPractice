@@ -68,12 +68,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="1605"/>
+            <point key="canvasLocation" x="816" y="1592"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="hU4-FB-tcu">
             <objects>
-                <viewController id="oXf-9V-Eqe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="oXf-9V-Eqe" customClass="HomeViewController" customModule="InstaSearchViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmT-b1-9Gw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC2-3b-Fox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="899"/>
+            <point key="canvasLocation" x="19" y="899"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w9o-Wa-nc3">
@@ -218,7 +218,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eu-Ow-ZAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="899"/>
+            <point key="canvasLocation" x="817" y="899"/>
         </scene>
     </scenes>
     <resources>
