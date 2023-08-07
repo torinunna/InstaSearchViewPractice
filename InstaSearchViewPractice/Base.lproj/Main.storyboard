@@ -117,10 +117,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixQ-R8-iMW">
-                                                    <rect key="frame" x="0.0" y="60" width="414" height="310.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ixQ-R8-iMW" secondAttribute="height" multiplier="4:3" id="rT1-zy-dWt"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="60" width="414" height="341"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -131,6 +128,7 @@
                                                 <constraint firstItem="ixQ-R8-iMW" firstAttribute="top" secondItem="BeE-o3-sPz" secondAttribute="bottom" constant="10" id="QPh-OY-wET"/>
                                                 <constraint firstItem="BeE-o3-sPz" firstAttribute="top" secondItem="7vN-NG-DlX" secondAttribute="top" constant="10" id="Qzj-ud-Eky"/>
                                                 <constraint firstAttribute="trailing" secondItem="PEg-BD-Efx" secondAttribute="trailing" id="fIa-ov-CJ0"/>
+                                                <constraint firstAttribute="bottom" secondItem="ixQ-R8-iMW" secondAttribute="bottom" id="iot-CA-6hQ"/>
                                                 <constraint firstItem="PEg-BD-Efx" firstAttribute="leading" secondItem="BeE-o3-sPz" secondAttribute="trailing" constant="10" id="lc9-bz-5pW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
